@@ -49,35 +49,3 @@ footer {
 }
 
 
-@charset "utf-8";
-
-html {
-	height:100%;
-}
-
-body {
-	height: 100%;
-	margin: 20%;
-}
-
-.container {
-	height: 100%;
-}
-
-.sidebar {
-	float:left;
-	width: 20%;
-	height: 100%;
-	background-color: #44a8b5;
-}
-
-.main {
-	float: right;
-	width: 80%;
-	height: 100%;
-	background-color: white;
-}
-
-.content {
-	padding: 50px 100px;
-}
