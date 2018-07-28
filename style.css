@@ -1,99 +1,52 @@
-p {
-	color:#555
-}
-
-
-
-====================
-	Common
-====================
-
 html {
-	height: 100%;
+	margin:0px;
+	padding: 0px;
+	font-family: sans-serif;
 }
 
-body {
-	height: 100%;
-	margin: 0;
+.writing p {
+	text-align: center;
+
 }
 
-.container {
-	height: 100%
+.writing img {
+	align-items: center;
 }
 
-.sidebar {
-	float: left;
+.cover-image img {
+	display: block;
+	margin-left: 235px;
+	margin-right: auto;
 	width: 20%;
-	height: 100%
-	background-color: #44a0b5;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 10px 20px;
+	background-color: #43B7BA;
 }
 
-.main {
-	float:right;
-	width: 80%;
+
+#sidebar {
+	position: fixed;
+	width: 200px;
 	height: 100%;
-	background-color: white;
+	background: #8EE2EC;
+
 }
 
-.content {
-	padding: 50px 100px;
-	
+#sidebar a {
+	font-size: 20px;
+	text-shadow: 2px 2px #000000;
+	color:#EFF7FF;
 }
 
 
-======================
-	Sidebar
-======================
-
-.sitename {
+#sidebar .sitename {
 	text-align: center;
 }
-
-.sitename a {
-	text-decoration: none;
-	color: white;
-}
-
-.sitename a:hover {
-	color: lightgrey;
-}
-
-ul {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-ul li {
+#sidebar ul li {
+	color: rgba(230,230,230,0.9)
 	list-style: none;
-	border-bottom; 1px solid white;
-	padding-left 30px;
-	line-height: 60px;
-}
-
-ul li:first-child {
-	border-top: 1px solid white;
-}
-
-ul li: hover {
-	background-color: hotpink;
-}
-
-ul li a {
-	text-decoration: none;
-	color: white;
-	display: block;
-	line-height: 60px;
-}
-
-
-	
-
-
-======================
-	Other
-======================
-	
-
+	padding: 15px 10px;
+	border-bottom: 1px solid rgba(100,100,100,0.3);
 
 
