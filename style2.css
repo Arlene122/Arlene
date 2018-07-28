@@ -1,0 +1,50 @@
+html {
+	margin:0px;
+	padding: 0px;
+	font-family: sans-serif;
+}
+
+.writing p {
+	text-align: center;
+
+}
+
+.writing img {
+	align-items: center;
+}
+
+.cover-image img {
+	display: block;
+	margin-left: 235px;
+	margin-right: auto;
+	width: 20%;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 10px 20px;
+	background-color: #43B7BA;
+}
+
+
+#sidebar {
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	background: #8EE2EC;
+
+}
+
+#sidebar a {
+	font-size: 20px;
+	text-shadow: 2px 2px #000000;
+	color:#EFF7FF;
+}
+
+
+#sidebar .sitename {
+	text-align: center;
+}
+#sidebar ul li {
+	color: rgba(230,230,230,0.9)
+	list-style: none;
+	padding: 15px 10px;
+	border-bottom: 1px solid rgba(100,100,100,0.3);
