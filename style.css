@@ -18,7 +18,7 @@ body {
 }
 
 .sidebar {
-	float: left;
+	float: right;
 	width: 20%;
 	height: 100%
 	background-color: #44a0b5;
