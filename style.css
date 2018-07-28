@@ -67,13 +67,16 @@ html {
 
 #sidebar a {
 	font-size: 20px;
-	text-shadow: 2px 2px #000000;
+	text-shadow: 1px 1px #000000;
 	color:#EFF7FF;
+	text-decoration-line: none;
 }
 
 
 #sidebar .sitename {
 	text-align: center;
+	font-size: 25px;
+	border-bottom: 3px solid rgba(100,100,100,0.3);
 }
 #sidebar ul li {
 	color: rgba(230,230,230,0.9)
