@@ -4,9 +4,22 @@ html {
 	font-family: sans-serif;
 }
 
+h1 {
+	font-weight: 400;
+	height: 80px;
+	width: 100%;
+	background: #43B7BA;
+	line-height: 80px;
+	color: white;
+}
+
 .writing p {
 	text-align: center;
 
+}
+
+.writing img {
+	align-items: center;
 }
 
 .cover-image img {
@@ -20,39 +33,27 @@ html {
 	background-color: #43B7BA;
 }
 
-/*IMAGES*/
 
-.image1 img {
-	display: block;
-	margin-left: 230px;
-	margin-top: 0px;
-	margin-right: auto;
-	width: 20%;
+/* Gid Gallery*/
+
+#gallery {
+	margin-left: 250px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-auto-rows: minmax(100px, auto);
+	max-width: 1000px;
+	margin-left: 0 auto;
 }
 
-.image2 img {
-	display: block;
-	margin-left: 230px;
-	margin-top: 10px;
-	width: 20%;
-	column-rule: left
+#gallery div {
+	background: #3bbced;
+	padding: 5px;
 }
 
-.image3 img {
-	display: block;
-	margin-left: 230px;
-	margin-top: 15px;
-	width: 20%;
-	column-rule: left
+#gallery div:nth-child(even){
+	background: #777;
 }
 
-.image4 img {
-	display: block;
-	margin-left: 230px;
-	margin-top: 15px;
-	width: 20%;
-	column-rule: left
-}
 
 
 /*Menue Navigator*/
@@ -67,8 +68,7 @@ html {
 
 #sidebar a {
 	font-size: 20px;
-	text-shadow: 1px 1px #000000;
-	color:#EFF7FF;
+	color:#000000;
 	text-decoration-line: none;
 }
 
@@ -76,12 +76,17 @@ html {
 #sidebar .sitename {
 	text-align: center;
 	font-size: 25px;
-	border-bottom: 3px solid rgba(100,100,100,0.3);
+	
 }
 #sidebar ul li {
 	color: rgba(230,230,230,0.9)
 	list-style: none;
 	padding: 15px 10px;
 	border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+
+#sidebar ul li:hover {
+	background: #DEECEC;
+}
 
 
