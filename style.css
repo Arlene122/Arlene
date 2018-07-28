@@ -20,6 +20,42 @@ html {
 	background-color: #43B7BA;
 }
 
+/*IMAGES*/
+
+.image1 img {
+	display: block;
+	margin-left: 230px;
+	margin-top: 0px;
+	margin-right: auto;
+	width: 20%;
+}
+
+.image2 img {
+	display: block;
+	margin-left: 230px;
+	margin-top: 10px;
+	width: 20%;
+	column-rule: left
+}
+
+.image3 img {
+	display: block;
+	margin-left: 230px;
+	margin-top: 15px;
+	width: 20%;
+	column-rule: left
+}
+
+.image4 img {
+	display: block;
+	margin-left: 230px;
+	margin-top: 15px;
+	width: 20%;
+	column-rule: left
+}
+
+
+/*Menue Navigator*/
 
 #sidebar {
 	position: fixed;
