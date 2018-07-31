@@ -56,12 +56,12 @@ h2 {
 }
 
 #gallery div {
-	background: #3bbced;
+	background: #EBEBEA;
 	padding: 5px;
 }
 
 #gallery div:nth-child(even){
-	background: #777;
+	background: #F6F6F5;
 }
 
 
