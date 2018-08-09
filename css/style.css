@@ -1,0 +1,265 @@
+/* ==== Google font ==== */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,900);
+@import url('http://fonts.googleapis.com/css?family=Ek+Mukta:400,600,700');
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Ek Mukta', sans-serif;
+	font-weight: 300;
+    color: #666;
+    background-color: #fff;
+	font-size: 16px;
+    line-height: 1.6em;
+	font-weight: 400;
+}
+
+p {
+	font-size:16px;
+
+}
+
+.btn-primary {
+  padding: 8px 20px;
+  background: #fff;
+  color: #000;
+  border-radius: 0;
+  border:none;
+  margin-top: 10px;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus{
+  background: #fff;
+  color:#99F3FF;
+  outline: none;
+  box-shadow: none;
+} 
+
+
+/* --- logo --- */
+.site-logo {	
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.site-logo a.brand {
+	color: #99F3FF;	
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	
+}
+.site-logo a.brand:hover {
+	text-decoration:none;
+}
+
+/* ------- Navigation ------------ */
+.navigation  {
+  background-color:#fff;
+  padding:0;
+}
+
+.navbar-brand h1 {
+  margin-top:9px;
+  padding-top:5px;
+  float: left;  
+  font-size: 25px;  
+  color:#333; 
+  text-transform:uppercase;
+  font-weight:900;
+}
+
+.navbar-brand h1 span {
+  color: #77BFC7;
+}
+
+.menu {
+  font-size:12px;
+  float:right;
+  text-transform:uppercase;
+  font-weight:700;  
+}
+
+.menu ul.nav-tabs li {
+  color:#000; 
+}
+
+.nav-tabs {
+  border-bottom: 0;
+}
+.nav-tabs > li {
+  float: left;
+  margin-bottom: 0;
+}
+.nav-tabs > li > a {  
+  border-radius:0;
+  color:#333;
+  padding:30px;
+}
+
+.nav-tabs > li > a:hover {  
+  color: #1BBD36;
+  border-color: #fff #fff #fff;
+  border-radius:0;
+  background-color:#fff; 
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-brand:focus {
+    outline: 0;
+}
+
+.nav.navbar-nav {
+	padding:30px;
+}
+
+.navbar-fixed-top ul.nav li a {
+	font-size: 14px;
+	letter-spacing: 3px;
+    color: #000;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.navbar-fixed-top .nav li a:hover,
+.navbar-fixed-top .nav li a:focus,
+.navbar-fixed-top.nav li.active {
+    outline: 0;
+  
+	color:#99F3FF ;
+}
+
+.navbar-toggle {
+    padding: 4px 6px;
+    font-size: 18px;
+    color: #000;
+}
+
+.navbar-toggle:focus,
+.navbar-toggle:active {
+    outline: 0;
+}
+
+/*  Slideshow */
+.slider {
+	padding-top:50px;
+}
+
+.center h2{
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align:center;
+  color:#000;
+  text-transform:uppercase;
+}
+
+#portfolio .lead {
+	text-align:center;
+	font-size:18px;
+	margin-bottom:40px;
+}
+
+#portfolio {
+	padding-top:40px;
+  padding-left:500px;
+	position:center;
+}
+
+
+.portfolio-items, 
+.portfolio-filter {
+  list-style: none outside none;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.portfolio-filter > li {
+  display: inline-block;
+}
+
+.portfolio-filter > li a {
+  background: none repeat scroll 0 0 #FFFFFF;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 20px;
+  text-transform: uppercase;
+  transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+  border: 1px solid #F2F2F2;
+  outline: none;
+  border-radius: 0;
+}
+
+
+
+.panel-default{
+  border-color: transparent;
+}
+
+.panel-default>.panel-heading,
+.panel{
+  background-color: #e6e6e6; 
+  border:0 none;
+  box-shadow:none;
+}
+
+.panel-default>.panel-heading+.panel-collapse .panel-body{
+  background: #fff;
+  color: #858586;
+}
+
+.panel-body{
+  padding: 20px 20px 10px;
+}
+
+.panel-group .panel+.panel{
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+}
+
+.panel-group .panel{
+  border-radius: 0;
+}
+
+
+
+.panel-title>a{
+  color: #4e4e4e;
+}
+
+
+a.accordion-toggle  i{
+  width: 40px;
+  line-height: 38px;
+  font-size: 20px;
+  margin-top: -10px;
+  text-align: center;
+  margin-right: -15px;
+  background: #99F3FF;
+  color:#fff;
+}
+
+.panel-heading.active a.accordion-toggle i{
+  background: #99F3FF;
+  color: #fff;
+}
+
+.panel-heading.active a.accordion-toggle.collapsed i{
+  background: #99F3FF;
+  color: #fff;
+}
+
+
+
