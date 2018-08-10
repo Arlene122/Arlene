@@ -171,7 +171,7 @@ p {
 
 #portfolio {
 	padding-top:40px;
-  padding-left:500px;
+  object-position: center;
 	position:center;
 }
 
@@ -206,6 +206,7 @@ p {
 
 .panel-default{
   border-color: transparent;
+  text-align: center;
 }
 
 .panel-default>.panel-heading,
@@ -260,6 +261,10 @@ a.accordion-toggle  i{
   background: #99F3FF;
   color: #fff;
 }
+
+
+
+
 
 
 
