@@ -1,0 +1,92 @@
+html {
+	margin:0px;
+	padding: 0px;
+	font-family: sans-serif;
+}
+
+h1 {
+	font-weight: 400;
+	height: 80px;
+	width: 100%;
+	background: #43B7BA;
+	line-height: 80px;
+	color: white;
+}
+
+h2 {
+	margin-left: 360px;
+	font-weight: 400;
+	height: 80px;
+	width: 50%;
+	background: #43B7BA;
+	line-height: 80px;
+	color: white;
+}
+
+
+.cover-image img {
+	display: block;
+	margin-left: 235px;
+	margin-right: auto;
+	width: 20%;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 10px 20px;
+	background-color: #43B7BA;
+}
+
+
+/* Gid Gallery*/
+
+#gallery {
+	margin-left: 250px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-auto-rows: minmax(100px, auto);
+	max-width: 1000px;
+	margin-left: 0 auto;
+}
+
+#gallery div {
+	background: #EBEBEA;
+	padding: 5px;
+}
+
+#gallery div:nth-child(even){
+	background: #F6F6F5;
+}
+
+
+
+/*Menue Navigator*/
+
+#sidebar {
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	background: #8EE2EC;
+
+}
+
+#sidebar a {
+	font-size: 20px;
+	color:#000000;
+	text-decoration-line: none;
+}
+
+
+#sidebar .sitename {
+	text-align: center;
+	font-size: 25px;
+	
+}
+#sidebar ul li {
+	color: rgba(230,230,230,0.9)
+	list-style: none;
+	padding: 15px 10px;
+	border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+
+#sidebar ul li:hover {
+	background: #DEECEC;
+}
