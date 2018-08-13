@@ -19,6 +19,27 @@ p {
 
 }
 
+
+#gallery {
+  margin-left: 200px;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1000px;
+  margin-left: 0 auto;
+}
+
+#gallery div {
+  background: #ffffff;
+  padding: 15px;
+}
+
+#gallery div:nth-child(even){
+  background: #ffffff;
+}
+
+
+
 .btn-primary {
   padding: 8px 20px;
   background: #fff;
