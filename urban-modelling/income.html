@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset='utf-8' />
+    <title>mappp</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+
+    <script defer src='data/yr12_under_30.js'></script>
+
+
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/component.css">
+
+
+</head>
+<body>
+
+
+            <div class="container">
+                <div class="site-header">
+                    <div class="logo">
+                        <h1>Level Of Education in NSW</h1>
+                    </div>
+                    <div class="menu">
+                        <div class="navbar">
+                            <a>
+                            </a>
+                            <div >
+                                <ul class="nav">
+                                    <li class="active"><a href="index.html">ABOUT</a></li>
+                                    <li><a href="geojson.html">3D Graph</a></li>
+                                    <li><a href="income.html">Income</a></li>
+                                    <li><a href="sources.html">SOURCES</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+    <section id="portfolio">
+        <div class="container">
+          <div class="center">
+            <div class="col-md-6 col-md-offset-3">
+              <h2  style="font-size: 15px"><b>Comparing Weekly Income and level of Education</b></h2>
+              <hr>          
+            </div>
+          </div>
+        </div>
+
+
+
+    <div id="gallery3">
+        <div>
+            <h2  style="font-size: 15px"><b>Weekly Household Income</b></h2>          
+        </div>
+
+        <div>
+            <h2  style="font-size: 15px"><b>Level of school education completed</b></h2>          
+        </div>
+
+        <div>
+            <img src="urban-modelling-graphs/weekly-income.png" alt="Image Missing!" style="width:100%" />
+
+        </div>
+
+        <div>
+            <img src="urban-modelling-graphs/p-yr12-25-34-2.png" alt="image missing!" style="width:100%" />
+        </div>
+
+        <div>
+            <img src="urban-modelling-graphs/legend-income.png" alt="image missing!" style="width:100%" />
+        </div>
+
+        <div>
+            <img src="urban-modelling-graphs/legend-income.png" alt="image missing!" style="width:100%" />
+        </div>
+
+    </div>
+
+
+    <div id="gallery2">
+
+        <div>
+
+            <p>
+                
+                The Income graph shows that Northern Sydney has a higher concentration of yellow which highlights a larger level of weekly income per household. The yellow on the income graph corresponds to the yellow on the level of education graph. This cCould be riven by 2 key factors;
+
+                <ol>
+                    <li>
+                        <p> Northern Sydney has more expensive real-estate, and generally better educated people earn higher salaries; drawing them to those suburbs.</p>
+                    </li>
+
+                    <li>
+                        <p> Australia has a strong immigration policy which has a bias towards better educated people.  Many of these immigrants are doctors, lawyers, teacher, engineers, accountants and other professions; all of which completed a high level of education and also have the earning capacity to afford the more expensive real-estate in this area.</p>
+                    </li>
+
+                </ol>
+
+            </p>
+                
+            <p>
+                People who attain year 12 generally go on to further their studies, creating a higher likehood to be employed. According to the graph, people who do not fully engage in education have lower income. This can be due to the fact that less education results in the risk of unemployment, creating a cycle of low pay and low employment in the long term. 
+            </p>
+        </div>
+    </div>
+
+
+    <section id="portfolio">
+        <div class="container">
+          <div class="center">
+            <div class="col-md-6 col-md-offset-3">
+              <h2  style="font-size: 15px"><b>Interactive Map</b></h2>
+              <hr>          
+            </div>
+          </div>
+        </div>
+
+    <div id="graph-h">
+        <div>
+            <br></br>
+            <h2  style="font-size: 15px"><b>Amount of Monthly Income Per Household <br>vs </br> Percentage of People who Completed Year 12 within the Area</b></h2> 
+            <br></br>         
+        </div>
+    </div>
+
+
+
+<nav id="menu"></nav>
+<div id="map"></div>
+
+<script>
+
+
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic2hpcmxleWx1IiwiYSI6ImNqNnZuYWE4ajFrNnIzMmxhZTNpZ2p4bzAifQ.mhIwlLTJVAJl6siryT8i4Q';
+  var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/shirleylu/cj7kfvh1m7fst2rnvuxhht65g',
+      center: [151.2093, -33.8688],
+      zoom:9,
+      pitch: 0,
+      bearing: 0,
+  });
+
+  map.on('load', function() {
+
+
+      map.addLayer({
+          'id': 'Area = Yr12 < 20%',
+          'type': 'fill',
+          'source': {
+              'type': 'geojson',
+              'data': 'https://raw.githubusercontent.com/Arlene122/CODE-1230/master/yr12_under_20%25'
+          },
+          'layout': {},
+          'paint': {
+              'fill-color': '#53FF07',
+              'fill-opacity': 0.4
+          }
+      });
+
+      map.addLayer({
+          'id': 'Area = yr12 < 40%',
+          'type': 'fill',
+          'source': {
+              'type': 'geojson',
+              'data': 'https://raw.githubusercontent.com/Arlene122/CODE-1230/master/yr12_under_40'
+
+          },
+          'layout': {},
+          'paint': {
+              'fill-color': '#30DFF4',
+              'fill-opacity': 0.4
+          }
+      });
+
+      map.addLayer({
+          'id': 'Area = yr12 > 50%',
+          'type': 'fill',
+          'source': {
+              'type': 'geojson',
+              'data': 'https://raw.githubusercontent.com/Arlene122/CODE-1230/master/yr12_over_50%25'
+          },
+          'layout': {},
+          'paint': {
+              'fill-color': '#2731FE',
+              'fill-opacity': 0.4
+          }
+      }); 
+
+      map.addLayer({
+          'id': 'Area = yr12 > 80%',
+          'type': 'fill',
+          'source': {
+              'type': 'geojson',
+              'data': 'https://raw.githubusercontent.com/Arlene122/CODE-1230/master/yr12_over_80%25'
+          },
+          'layout': {},
+          'paint': {
+              'fill-color': '#F424FC',
+              'fill-opacity': 0.4
+          }
+      });  
+
+
+
+
+
+
+      map.addLayer({
+          'id': 'Income < $3000',
+          'type': 'fill',
+          'source': {
+              'type': 'geojson',
+              'data': 'https://raw.githubusercontent.com/Arlene122/CODE-1230/master/inc_u_3k'
+          },
+          'layout': {},
+          'paint': {
+              'fill-color': '#E1DB3E',
+              'fill-opacity': 0.4
+          }
+      }); 
+
+      map.addLayer({
+          'id': 'Income > $4000',
+          'type': 'fill',
+          'source': {
+              'type': 'geojson',
+              'data': 'https://raw.githubusercontent.com/Arlene122/CODE-1230/master/oncome_o_4k'
+          },
+          'layout': {},
+          'paint': {
+              'fill-color': '#FFAC0C',
+              'fill-opacity': 0.4
+          }
+      });
+
+
+      map.addLayer({
+          'id': 'Income > $5000',
+          'type': 'fill',
+          'source': {
+              'type': 'geojson',
+              'data': 'https://raw.githubusercontent.com/Arlene122/CODE-1230/master/income_o_5k'
+          },
+          'layout': {},
+          'paint': {
+              'fill-color': '#FF0000',
+              'fill-opacity': 0.4
+          }
+      });
+
+
+
+       
+
+
+
+map.setLayoutProperty('Area = Yr12 < 20%','visibility','visible');
+map.setLayoutProperty('Area = yr12 < 40%','visibility','none');
+map.setLayoutProperty('Area = yr12 > 50%','visibility','none');
+map.setLayoutProperty('Area = yr12 > 80%','visibility','none');
+
+map.setLayoutProperty(' ','visibility','none');
+
+map.setLayoutProperty('Income < $3000','visibility','none');
+map.setLayoutProperty('Income > $4000','visibility','none');
+map.setLayoutProperty('Income > $5000','visibility','none');
+
+
+//console.log(map.getLayoutProperty('Iteration1','visibility'));
+
+var nazzzz = map.getLayoutProperty('Area = Yr12 < 20%','visibility');
+
+});
+
+var toggleableLayerIds = ['Area = Yr12 < 20%','Area = yr12 < 40%', 'Area = yr12 > 50%', 'Area = yr12 > 80%',' ','Income < $3000','Income > $4000','Income > $5000', ]; 
+
+var buttonAdder =  function(value, index, array){
+        var id = value;
+        var link = document.createElement('a');
+        link.href = '#';
+
+        if(index==0){
+        link.className = 'active';
+        }else{
+        link.className = '';
+        };
+
+        link.textContent = id;
+        // console.log(link.textContent)
+        link.onclick = function (e) {
+            var clickedLayer = this.textContent;
+             e.preventDefault();
+             e.stopPropagation();
+
+            var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+            if (visibility === 'visible') {
+                map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+                nazzzz= "dwadwda"
+                this.className = '';
+            } else {
+                this.className = 'active';
+                map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+            }
+        };
+
+        var layers = document.getElementById('menu');
+        layers.appendChild(link);
+    }
+
+toggleableLayerIds.map(buttonAdder)
+
+
+
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+// When a click event occurs near a polygon, open a popup at the location of
+// the feature, with description HTML from its properties.
+map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['Area = Yr12 < 20%','Area = yr12 < 40%', 'Area = yr12 > 50%', 'Area = yr12 > 80%', ' ', 'Income < $3000', 'Income > $4000','Income > $5000', ] });
+    if (!features.length) {
+        return;
+    }
+
+    var feature = features[0];
+    var feat = features.length;
+
+    var popup = new mapboxgl.Popup()
+        .setLngLat(map.unproject(e.point))
+        .setHTML(feature.properties.tag)
+        .addTo(map);
+
+// Use the same approach as above to indicate that the symbols are clickable
+// by changing the cursor style to 'pointer'.
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['Area = Yr12 < 20%','Area = yr12 < 40%', 'Area = yr12 > 50%', 'Area = yr12 > 80%', ' ','Income < $3000', 'Income > $4000','Income > $5000','Iteration'] });
+    map.getCanvas().style.cursor = feat ? 'pointer' : '';
+});
+
+
+
+
+  });
+
+
+
+</script>
+
+
+
+
+</body>
+
+</section>
+</body>
+</html>
