@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Display a map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/component.css">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script> 
+    <script src='./building.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; left:160px; top:200px; bottom:20px; width:80%; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="site-header">
+            <div class="logo">
+                <img src="images/logo.png"image missing!" style="width:100%" />
+                <h1>Data
+                    <span>Driven Design</span>
+                </h1>
+            </div>
+            <div class="menu">
+                <div class="navbar">
+                    <a>
+                    </a>
+                    <div >
+                        <ul class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="problem_id.html">Problem Identification</a></li>
+                            <li><a href="diagrams.html">Diagrams</a></li>
+                            <li><a href="models.html">Interactive Model</a></li>
+                            <li><a href="heat.html">Reducing Heat Islands</a></li>
+                            <li><a href="renders.html">Renders</a></li>
+                            <li><a href="sources.html">Sources</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWxlbmUiLCJhIjoiY2psZWhidGNrMG02eDNrbHE4ZDhzOGt1diJ9.NF_7SH9mwWqxgh-DUilEnA';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/light-v9', // stylesheet location
+    center: [150.99738121032715,-33.864215250359884], // starting position [lng, lat]
+    zoom: 13,
+    pitch: 35,
+    bearing: 30 // starting zoom
+});
+
+map.on('load', function() {
+    // Insert the layer beneath any symbol layer.
+    var layers = map.getStyle().layers;
+
+    var labelLayerId;
+    for (var i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+            labelLayerId = layers[i].id;
+            break;
+        }
+    }
+
+    map.addLayer({
+        'id': '3d-buildings',
+        'source': 'composite',
+        'source-layer': 'building',
+        'filter': ['==', 'extrude', 'true'],
+        'type': 'fill-extrusion',
+        'minzoom': 15,
+        'paint': {
+            'fill-extrusion-color': '#aaa',
+
+            // use an 'interpolate' expression to add a smooth transition effect to the
+            // buildings as the user zooms in
+            'fill-extrusion-height': ["get", "height"],
+            'fill-extrusion-base': ["get", "min_height"],
+            'fill-extrusion-opacity': .6
+        }
+    }, labelLayerId);
+});
+
+map.on('load', function() {
+
+    map.addLayer({
+        "id": "data",
+        "type": "fill-extrusion",
+        "source": {
+            'type': 'geojson',
+            'data': building
+        },
+        'layout': {
+            'visibility': 'visible'
+            },
+        'paint': {
+                'fill-extrusion-color' : {
+                    'property': 'colour',
+                    'type': 'identity'
+                },
+                'fill-extrusion-height' : {
+                    'type': 'identity',
+                    'property': 'height'
+                },
+                'fill-extrusion-base' : {
+                    'type': 'identity',
+                    'property': 'base_height'
+                },
+                 'fill-extrusion-opacity': 0.7
+            }
+
+    });
+});
+
+
+</script>
+
+</body>
+</html>

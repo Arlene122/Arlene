@@ -1,0 +1,318 @@
+	header{position: static; 
+    top:0; 
+    height: 25%; 
+    text-align: center; 
+    width:100%;
+    }
+
+
+
+
+  body { 
+    margin-top: 0px;  
+    margin-bottom: 50px;  
+    color: #9d9d9d;}
+	h1, h2, h3, h4, h5, h6{margin: 0;
+  }
+
+	h1 {
+    font-size: 24px; 
+    line-height: 30px; 
+    color: #716a72; 
+  }
+
+	h2{font-size: }
+
+	p{font-size: 15px; 
+    color: #9d9d9d; 
+    line-height: 24px; 
+    padding-bottom: 5px; 
+    font-family: 'source_sans_proregular'; 
+    margin-bottom: 0;
+  }
+	
+  img {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  ul {
+  list-style: none;
+  padding-top: none;
+  padding-bottom:0;
+}
+
+  li {
+  list-style: none;
+  padding-top: none;
+  padding-bottom: 0;
+}
+
+
+/* ==========================================================================
+    Navigation bar
+   ========================================================================== */
+  .site-header {
+    text-align: center; 
+    padding-top: 35px; 
+    background: #513D99; 
+    border-radius: 3px 3px 0 0;
+  }
+
+
+  .logo h1 {
+    font-size: 40px; 
+    line-height: 52px; 
+    color: #FFFFFF; 
+    text-transform: uppercase; 
+    padding-bottom: 15px;  
+    font-family: 'source_sans_problack'; 
+    letter-spacing: 7px;
+  }
+
+  .logo img {
+    position: absolute;
+    left: 150px;
+    top: 12px;
+
+    max-height: 150px;
+    max-width: 220px;
+    width: 120px;
+    height: 120px;
+  }
+
+
+
+
+/* ==========================================================================
+                 Navigation         
+   ========================================================================== */
+
+
+  .menu {
+    padding-top: 30px; 
+    padding-bottom: 25px; 
+    text-align: center;
+  }
+
+  .menu .navbar {
+    display: inline-block;  
+    font-family: 'source_sans_prolight'; 
+    margin-bottom: 0;
+  }
+
+/* =================
+     Home Tag         
+   ================= */
+
+  .menu .navbar .nav > .active > a {
+    color: #FFFFFF; 
+    background: none; 
+    background-image: none;
+  }
+
+  .menu .navbar .nav > .active > a:hover {
+    background-color: #FFFFFF; 
+    background-image: none; 
+    box-shadow: none;
+  }
+
+  .menu .navbar .nav > li > a {
+    color: #949494; 
+    font-size: 16px; 
+    text-transform: uppercase; 
+    padding-right: 45px; 
+    text-shadow: none; 
+    box-shadow: none; 
+    letter-spacing: 1px;
+  }
+
+  .menu .navbar .nav > li > a:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+
+
+
+  .navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+  }
+
+
+  .navbar .nav > li {
+    float: center;
+  }
+
+  .navbar .nav > li > a {
+    float: none;
+    padding: 10px 15px 10px;
+    color: #777777;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #ffffff;
+  }
+
+
+.navbar-static-top {
+  position: static;
+  margin-bottom: 0;
+}
+
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+}
+
+
+
+.navbar-fixed-bottom .navbar-inner {
+  border-width: 1px 0 0;
+}
+
+
+
+.navbar .nav.pull-right {
+  float: right;
+  margin-right: 0;
+}
+
+.navbar .nav > li {
+  float: left;
+}
+
+
+/* ================================================
+                 Headings      
+   ================================================ */
+
+#headings h2{
+  text-align: center;
+  font-size: 15px;
+}
+
+/* ================================================
+                 Main Titles       
+   ================================================ */
+
+.title {
+  font-size: 15px;
+  text-align: center;
+  text-decoration-style: bold;
+  
+}
+
+
+
+/*=====================================================================
+                                Gallery/ 1 Column
+  ====================================================================*/
+
+#gallery {
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#gallery div {
+  background: #ffffff;
+  padding: 0;
+}
+
+#gallery h2 {
+  text-align: center;
+  padding-top: 15px;
+}
+
+#gallery p {
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 50px;
+  padding-right: 20px;
+}
+
+#gallery div:nth-child(even){
+  background: #ffffff;
+}
+
+
+/*=====================================================================
+                                Gallery/ Two Columns
+  ====================================================================*/
+
+#gallery2 {
+  margin-left: 200px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#gallery2 div {
+  background: #ffffff;
+  padding: 0;
+}
+
+#gallery2 h2 {
+  text-align: center;
+  padding-top: 60px;
+}
+
+#gallery2 div:nth-child(even){
+  background: #ffffff;
+}
+
+
+
+/*=====================================================================
+                                Gallery/ three Columns
+  ====================================================================*/
+
+#gallery3 {
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#gallery3 div {
+  background: #ffffff;
+  padding: 20px;
+}
+
+#gallery3 h2 {
+  text-align: center;
+  padding-top: 55px;
+}
+
+
+
+#gallery3 div:nth-child(even){
+  background: #ffffff;
+}
+
+
+/*=====================================================================
+                                map
+  ====================================================================*/
+
+
+
+#map { position:absolute; left:30px; top:50px; bottom:20px; width:80%; 
+    padding-right: 200px; }
